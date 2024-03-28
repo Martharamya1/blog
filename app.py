@@ -5,13 +5,13 @@ from otp import genotp
 app=Flask(__name__)
 #secret key
 app.config['SECRET_KEY'] = "my super secret key that no one is supposed to know"
-mydb=mysql.connector.connect(host='localhost',user='root',password='system',db='blog')
+mydb=mysql.connector.connect(host='localhost',user='root',password='system',db='blog') 
 with mysql.connector.connect(host='localhost',user='root',password='system',db='blog'):
-    cursor=mydb.cursor(buffered=True)
+    cursor=mydb.cursor(buffered=True) 
     cursor.execute("create table if not exists registration(username varchar(50) primary key,mobile varchar(20) unique,email varchar(50) unique,address varchar(50),password varchar(20))")
 
-mycursor=mydb.cursor()
-@app.route('/reg',methods=['GET','POST'])
+mycursor=mydb.cursor() 
+@app.route('/reg',methods=['GET','POST']) 
 
 def reg():
     if request.method=='POST':

@@ -4,22 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+           background-image: url("https://watermark.lovepik.com/photo/40021/9739.jpg_wh1200.jpg");
+           font-family: Arial;
+           background-color: white;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+       }
+       .container {
+           width: 400px;
+           padding: 20px;
+           background-color: #fff;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+       input{
+           width:90%;
+           padding:10px;
+       }
+       
+    </style>
 </head>
 <body>
-    
-    <form method="post">
-        <h2>Register</h2>
-        <label for="username">Username:</label>
-        <input name='username' type="text" id="username" required>
-        <label for="mobile">Mobile Number:</label>
-        <input name="mobile" type="tel" id="mobile" required>
-        <label for="email">Email ID:</label>
-        <input name="email" type="email" id="email" required>
-        <label for="address">Address:</label>
-        <input name='address' type="text" id="address" required>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+        <form method="post">
+            <h2>Register</h2>
+            <label for="username">Username:</label>
+            <input name='username' type="text" id="username" required>
+            <label for="mobile">Mobile Number:</label>
+            <input name="mobile" type="tel" id="mobile" required>
+            <label for="email">Email ID:</label>
+            <input name="email" type="email" id="email" required>
+            <label for="address">Address:</label>
+            <input name='address' type="text" id="address" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <button type="submit">Submit</button>
+            <p>Already have an account?<a href="{{url_for('login')}}">Login</a></p>
+        </form>
+    </div>
 </body>
 </html>
